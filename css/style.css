@@ -1,0 +1,65 @@
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  width: 450px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 3em;
+  overflow: auto;
+}
+
+.greeting {
+  font-size: 1.5em;
+}
+
+.bottomBar {
+  float: left;
+  width: 100%;
+}
+
+.socialBar {
+  width: 200px;
+  float: left;
+}
+
+.name {
+  height: 25px;
+  line-height: 25px;
+  width: 200px;
+  float: right;
+  text-align: right;
+}
+
+img {
+  padding-right: 20px;
+  border: 0;
+  width: 25px;
+}
+
+.subdomain {
+  float: left;
+  text-align: center;
+  height: 3em;
+  width: 47.5%;
+  line-height: 3em;
+  background-color: #000;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  color: #fff;
+}
+
+.sub-left {
+  margin-right: 2.5%;
+}
+
+.sub-right {
+  margin-left: 2.5%;
+}
