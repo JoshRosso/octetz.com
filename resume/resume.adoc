@@ -1,0 +1,70 @@
+== Josh Rosso
+
+**Mobile:** 440.610.2857
+
+**Email:** josh@joshrosso.com
+
+**Site:** http://joshrosso.com[joshrosso.com]
+
+**Github:** https://github.com/joshrosso[github.com/joshrosso]
+
+**Technical focuses:**
+
+* Java / https://spring.io[Spring] / https://maven.apache.org[Maven] / https://docs.mulesoft.com/mule-fundamentals/v/3.7/mule-application-architecture[MuleESB]
+* Performance / http://jmeter.apache.org[JMeter] / http://www.linuxcommand.org/man_pages/sar1.html[sar]
+* Go[lang]
+* AWS / EC2 / R53 / S3
+* *nix / nginx / apache 
+
+== Experience
+
+=== MuleSoft
+**Senior Consultant / Systems Developer / Instructor**
+
+_December 2013 to present_
+
+* Designed and implemented API / integration applications for multiple fortune 500 companies.
+* Delivered performance testing including code/system tuning, analysis, and test case development to help multiple organizations achieve their throughput requirements.
+* Created http://training.mulesoft.com[MuleSoft Training's] infrastructure including web services, servers, and monitoring utilities.
+* Wrote MuleSoft's internal marketing integration service.
+* Contributed to MuleSoft's code base and documentation, outside of the services organization, by creating multiple pull requests. 
+* Instructed and consulted on Mule, CI, development practices, and devops to teams across the globe.
+
+=== Hyland Software
+**Technical Instructor**
+
+_July 2012 to December 2013_
+
+* Wrote infrastructure scripts responsible for provisioning and maintaining internal training systems.
+* Engineered proof of concepts used by office of CTO to demonstrate complex case management (relational database) offerings.
+* Delivered conference workshops on Hyland Software implementation practices. 
+* Delivered Hyland's level 2 technical training to most engineering and services hires during my employed time.
+
+=== Apple Inc
+**Instructor**
+
+_October 2009 to July 2012_
+
+* Lead training workshops and extended classes for to various Apple markets.
+* Developed a deep understanding of underlying Unix principals and system profiling.
+* Achieved Apple Tech certification covering hardware, networking, and system maintenance.
+* Engaged customers on the ground at various Apple retails locations to facilitate workshops and provide technical support.
+* Worked out of the Cupertino office to develop training and technical skill sets.
+
+=== Pinehaven Greenhouses, Inc 
+**Webmaster**
+
+_2005 to October 2009_
+
+Growing up, I worked at a greenhouse. After my first year, I took over development of the website. Responsibilities are below.
+
+* Maintain website view layer with html and css.
+* Basic web programming implementing dynamic content in PHP (back in PHP4 days).
+* Setup internal network's remote desktop configuration.
+
+== Education
+I did not attend college.
+
+== Story
+
+I always knew I'd like to focus my professional life around technology. Considering technology's massive scope, it was a challenge to find where to place my effort. Overtime I was provided the opportunity to work on more and more development projects. This is where I grew my affinity for software development. As my development skill set grew, I took on consulting and training roles that allowed me to do development work, yet still maintain a relationship with the technologies user base. As I continue to progress in the amazing world of software development I'm finding a desire to spend more time writing software and contributing to open source. I'm excited to see the amazing technologies that will come out of this flourishing world of software engineering.
