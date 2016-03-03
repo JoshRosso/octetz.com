@@ -1,8 +1,6 @@
 == Josh Rosso
 
-**Mobile:** 440.610.2857
-
-**Email:** josh@joshrosso.com
+**Email:** joshrosso@gmail.com
 
 **Site:** http://joshrosso.com[joshrosso.com]
 
@@ -12,7 +10,8 @@
 
 * Java / https://spring.io[Spring] / https://maven.apache.org[Maven] / https://docs.mulesoft.com/mule-fundamentals/v/3.7/mule-application-architecture[MuleESB]
 * Performance / http://jmeter.apache.org[JMeter] / http://www.linuxcommand.org/man_pages/sar1.html[sar]
-* Go[lang]
+* https://golang.org/[Go]
+* https://en.wikipedia.org/wiki/Software_development_process[SDLC] / https://git-scm.com/documentation[git] workflows / https://en.wikipedia.org/wiki/Continuous_integration[Continous Integration] 
 * AWS / EC2 / R53 / S3
 * *nix / nginx / apache 
 
