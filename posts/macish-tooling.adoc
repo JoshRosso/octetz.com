@@ -1,0 +1,185 @@
+:imagesdir: ../imgs
+
+= Mac(ish) Tooling
+
+Macs make great dev boxes. While I'd love to brag about how I'm developing day-to-day on my self-compiled Gentoo system, I find myself selling out time and time again for the unmatched reliability of my Mac. I simply cannot afford to recompile my kernel each time google chrome has an update. Just poking fun my Gentoo friends! In this post, I wanted to highlight a few of my favorite tools for doing development work. While some tooling discussed is Mac specific, much of it is agnostic to any *nix system.
+
+== homebrew: Package manager
+
+http://brew.sh/[Homebrew] is a package manager for OSX. We [the Mac community] are not blessed with the awesomeness that is aptitude, pacman, or yum. This lack of a package manager is enough to turn any serious developer away. There is http://stackoverflow.com/questions/21374366/what-is-the-difference-usage-of-homebrew-macports-or-other-package-installation[some debate] over using homebrew vs macports as your package manager of choice. While there are good arguments for macports's maturity and lower-level implementation, I prefer homebrew's simplicity, ability to use native libs already present in OSX, and the ability to manage GUI applications through https://github.com/caskroom/homebrew-cask[homebrew cask]. That's right, you can even setup homebrew to download GUI apps such as chrome and slack. What used to be a messy drag and drop install now turns into:
+
+[source,shell]
+----
+brew cask install slack
+brew cask install google-chrome 
+----
+
+== tmux: Terminal multiplexer
+
+https://tmux.github.io/[tmux] is a feature rich terminal multiplexer that complements https://www.iterm2.com/[iTerm2] fantastically. On a basic level, tmux provides screen (tab) and horizontal/verical panel management in your shell. First, we must open our terminal and install tmux.
+
+[source, shell]
+----
+brew install tmux
+----
+
+After installation, tmux can be launched by entering `tmux` in your shell. If you grow fond of tmux, it can be launched automatically in iTerm2 by adding `tmux` to the "Send text at start" option in `Preferences > Profiles`. After tmux has launched, baring any fancy shell settings, you'll see a green bar at the bottom of your terminal windows. In this bar, new entries (tabs) will display as you open new windows.
+
+Launching tmux commands is accomplished with `ctrl + b`. After hitting `ctrl + b`, you can type a command with `:`, similar to vim, or use a shortcut key. For example, the table below, displays the key sequences to add panels and windows.
+
+[source,shell]
+----
+# new window
+ctrl + b + c
+
+# switch between windows
+ctrl + b + {WINDOW_INDEX}
+
+# create a horizontal split
+ctrl + b + "
+
+# create a vertical split
+ctrl + b + %
+
+# switch between panel splits
+ctrl + b + ← ↑ → ↓
+----
+
+image::tmux_splits_tabs.png[width=900]
+
+NOTE: The bottom pane looks visually different than standard tmux due to powerline. powerline kudos come later in this post.
+
+Pane synchronization is my second most common use for tmux. It's especially helpful when you need to login to that 4 node system and preform identical operations on all nodes. tmux's `synchronize-panes` feature solves this. Pane synchronization can be toggled by hitting `ctrl + b` and entering the following command.
+
+[source,shell]
+----
+:setw synchronize-panes
+----
+
+image::tmux_animated.gif[width=900]
+
+Here you can see the synchronization being toggled on and off. If you're interested in seeing a list of great tmux command's checkout https://gist.github.com/MohamedAlaa/2961058[MohamedAlaa's awesome cheat sheet gist].
+
+== vimdiff: The best difftool
+
+http://vimdoc.sourceforge.net/htmldoc/diff.html[vimdiff] provides a vi-like experience to viewing diffs. If you also agree with the universal truth that command line git is the best git experience available, leveraging vimdiff could bring many gains to your life. `git diff` is solid, no doubt, and when I'm looking to break up commits with `git add -p` I use the standard diff output. But I'm a sucker for colorful diffs that save me from committing embarrassing comments / code I had "forgot about". While the https://desktop.github.com/[GithHub Client], https://www.sourcetreeapp.com/[Source Tree], and others offer this, I don't want to leave the command line where I'm managing my local git repo. This is where vimdiff shines. 
+
+Assuming your machine already has vim, we simply need to configure vimdiff as the default difftool on your system. This is done by using `git config` to write global settings. 
+
+[source,shell]
+----
+# use vimdiff when calling `git difftool`
+git config --global diff.tool vimdiff
+
+# stop difftool from asking to view diff on each file
+git config --global difftool.prompt = false
+
+# make `git d == git difftool`
+git config --global alias.d difftool
+----
+
+Each global config change above is saved in `~/.gitconfig` where you can alter these settings in the future.
+
+[source,txt]
+----
+[user]
+	name = JoshRosso
+	email = joshrosso@gmail.com
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[alias]
+	d = difftool
+----
+
+Now that vimdiff is your default tool, `cd` to a directory with tracked, unstaged changes. From this directory run your new difftool alias command.
+
+[source,shell]
+----
+git d
+----
+
+Two vertically split vim buffers will pop up representing the changes in your first unstaged file. When using vimdiff, you're in read-only mode. From here you can use standard vim commands to jump between buffers and view the changes in the before (last commit) and after (current, unstaged changes).
+
+image::vimdiff.png[width=900]
+
+If your repository currently contains multiple unstaged changes, simply toggle between the various diffs with the following command.
+
+[source,shell]
+----
+:qa
+----
+
+I often use vimdiff to review my staged content when forming a commit message. I currently accomplish this using following commands.
+
+[source,shell]
+----
+# commit staged content; vim == $EDITOR
+git commit
+
+# open tmux pane horizontally below
+ctrl + b + "
+
+# run difftool against staged files
+git d --staged
+----
+
+This sequence results in the following view.
+
+image::vimdiff_commit_and_diff.png[width=900]
+
+Now I can construct my commit message while cycling through the file changes below with `:qa`. Perhaps someday I'll figure out how to trigger this with a single `git commit` command.
+
+== powerline: Status bar
+
+https://github.com/powerline/powerline[powerline] provides those colorful bars you see throughout the terminal screenshots above. It has plugins for https://powerline.readthedocs.org/en/latest/usage/shell-prompts.html[multiple shells], https://powerline.readthedocs.org/en/latest/usage/other.html#tmux-statusline[tmux], and https://powerline.readthedocs.org/en/latest/usage/other.html#vim-statusline[vim]. I use powerline to provide the visual context of where I am as I traverse through this world of text. powerline is a python tool that requires pip to install. When installing pip, I found my python version was out of date. So let's tackle python first then install powerline with pip.
+
+[source,shell]
+----
+brew install python
+pip install powerline-status
+----
+
+Next let's go ahead setup our plugins. Specifically, I use the tmux, zsh, and vim plugins. The configuration for each is shown below.
+
+* `~/.tmux.conf`
++
+[source,txt]
+----
+# run the powerline-daemon
+run-shell "powerline-daemon -q"
+
+# load the powerline config from pip's site-packages
+source "/Users/joshrosso/Library/Python/2.7/lib/python/site-packages/powerline/bindings/tmux/powerline.conf"
+----
+
+* `~/.zshrc`
++
+[source,txt]
+----
+# Load powerline.zsh from pip's site-packages
+. /Users/joshrosso/Library/python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
+----
+
+For vim, I use https://github.com/vim-airline/vim-airline[vim-airline] instead of the vim powerline plugin. I've found its performance to be better being that it's written in native VimL rather than python. Additionally, it is very easy to install if you're using a vim plugin manager such as Vundle. To setup airline, simply add the following to your `~.vimrc`
+
+* `~/.vimrc`
++
+[source,txt]
+----
+" vim-airline statusbar appears at all times
+set laststatus=2
+
+let g:airline_powerline_fonts = 1
+
+Plugin 'bling/vim-airline'
+----
+
+Then run `:PluginInstall` from vim and you're set!
+
+image::powerline_statusline.png[width=900]
+
+After install/configuration, you may see strange characters in place of where you see the sharp arrow-like edges above. This is a common issue with new powerline users as these status lines require a https://github.com/powerline/fonts[powerline font]. Setting this up can be a pain. Based on your shell/terminal you may need to specify the use of a powerline font in multiple places. There is good news if you are an iTerm user. iTerm will allow you to specify a font to use whenever it detects a non-AscII character. This means you can keep your current font configuration and fall back on the powerline ones. As an example, see my response to https://github.com/powerline/fonts/issues/106#issuecomment-98356295[this issue on GitHub].
+
+*Happy tooling everyone!*
