@@ -1,6 +1,9 @@
 include::../global/header.adoc[]
 
 :imagesdir: ../imgs
+:docinfo1:
+:postTitle: Mac(ish) Tooling
+:postDescription: Macs make great dev boxes. While I'd love to brag about how I'm developing day-to-day on my self-compiled Gentoo system, I find myself selling out time and time again for the unmatched reliability of my Mac.
 
 = Mac(ish) Tooling
 
@@ -51,7 +54,7 @@ image::tmux_splits_tabs.png[width=900]
 
 NOTE: The bottom pane looks visually different than standard tmux due to powerline. powerline kudos come later in this post.
 
-Pane synchronization is my second most common use for tmux. It's especially helpful when you need to login to that 4 node system and preform identical operations on all nodes. tmux's `synchronize-panes` feature solves this. Pane synchronization can be toggled by hitting `ctrl + b` and entering the following command.
+Pane synchronization is my second most common use for tmux. It's especially helpful when you need to login to that 4 node system and perform identical operations on all nodes. tmux's `synchronize-panes` feature solves this. Pane synchronization can be toggled by hitting `ctrl + b` and entering the following command.
 
 [source,shell]
 ----
@@ -113,7 +116,7 @@ If your repository currently contains multiple unstaged changes, simply toggle b
 :qa
 ----
 
-I often use vimdiff to review my staged content when forming a commit message. I currently accomplish this using following commands.
+I often use vimdiff to review my staged content when forming a commit message. I currently accomplish this using the following commands.
 
 [source,shell]
 ----
