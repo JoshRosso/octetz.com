@@ -1,0 +1,6 @@
+include::../global/header.adoc[]
+
+:imagesdir: ../imgs
+
+== link::macish-tooling[Mac(ish) Tooling]
+03/05/2016
