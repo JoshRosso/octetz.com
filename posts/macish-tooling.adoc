@@ -1,3 +1,5 @@
+include::../global/header.adoc[]
+
 :imagesdir: ../imgs
 
 = Mac(ish) Tooling
