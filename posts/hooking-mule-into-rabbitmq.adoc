@@ -334,4 +334,4 @@ Let's now redeploy the application, send in the same 1000 request load, and moni
 
 image::rabbit-mq-message-totals.png[width=800]
 
-While there's a ton more to learn about RabbitMQ and amqp, I hope this proved to be a simple example on how to get bootstrapped, connected, and playing around with acks/fetchs. Best of luck in your messaging-filled future!
+If you'd like to see the finalized project, feel free to link:https://github.com/JoshRosso/mule-rabbitmq-example/tree/hooking-mule-into-rabbitmq[clone it from my GitHub]. While there's a ton more to learn about RabbitMQ and amqp, I hope this proved to be a simple example on how to get bootstrapped, connected, and playing around with acks/fetchs. Best of luck in your messaging-filled future!
