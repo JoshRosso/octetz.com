@@ -2,5 +2,8 @@ include::../global/header.adoc[]
 
 :imagesdir: ../imgs
 
+== link:hooking-mule-into-rabbitmq[Hooking Mule into RabbitMQ]
+03/13/2016
+
 == link:macish-tooling[Mac(ish) Tooling]
 03/05/2016
