@@ -9,6 +9,8 @@ include::../global/header.adoc[]
 
 http://www.rabbitmq.com/[RabbitMQ] is a messaging solution with a focus on persistence and routing. It's implemented in Erlang and is a quite popular message broker for large scale applications. RabbitMQ is implemented to leverage the AMQP protocol. For such a capable broker, it's remarkably easy to get bootstrapped and hooked into Mule. Getting bootstrapped and connected will be our focus in this post, so let's get started.
 
+video::G1WQA3XxGRY[youtube, width=100%, height=500]
+
 == Setting up RabbitMQ
 
 You'll need to download RabbitMQ. After downloading, install RabbitMQ based on https://www.rabbitmq.com/download.html[the installation guide for your platform]. Let's begin by starting RabbitMQ.
