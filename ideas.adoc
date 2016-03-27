@@ -1,0 +1,7 @@
+= Post ideas
+
+- The unsinkable ship: When direct byte buffers aren't deallocated
+
+  - http://stackoverflow.com/questions/1854398/how-to-garbage-collect-a-direct-buffer-java
+
+  - http://stackoverflow.com/questions/1479214/how-to-reclaim-the-memory-used-by-a-java-thread-stack
