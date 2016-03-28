@@ -19,7 +19,7 @@ In this example, we'll use a REST service that allows our mobile applications to
 .Figure 1: Test case architecture.
 image:db-pooling-example.png[width=500]
 
-Based on this architecture, we have the database configured to allow 150 parallel connections. We've also setup Jetty to include 100 available threads. Ensuring the application process 100 parallel requests at a given time.
+Based on this architecture, we have the database configured to allow 150 parallel connections. We've also setup Jetty to include 100 available threads. Ensuring the application can process 100 parallel requests at a given time.
 
 == Application code
 
@@ -362,7 +362,7 @@ With the pooled application, we see significantly less usage of CPU from the ker
 
 == Summary
 
-After all this work, we've at the same conclusion stated in paragraph 1. *DB can pooling provide massive gains to our application's throughput capabilities*. Let's take a moment to review our before and after:
+After all this work, we are at the same conclusion stated in paragraph 1. *DB can pooling provide massive gains to our application's throughput capabilities*. Let's take a moment to review our before and after:
 
 [[figure-21]]
 .Figure 21: Time series DB time - [Non-pooled avg time: 45ms] vs [Pooled avg time: 1ms]
