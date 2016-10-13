@@ -1,7 +1,7 @@
 Hooking Mule into RabbitMQ 
 ==========================
 
-[ [WTFP License](http://www.wtfpl.net) | [Improve this reference](http://github.com/joshrosso) | [View all references](../index.html) ]
+[ [WTFP License](http://www.wtfpl.net) | [Improve this reference](http://github.com/joshrosso/octetz.com) | [View all references](../index.html) ]
 
 ---
 
@@ -396,4 +396,4 @@ future!
 
 *Last updated: 10/12/2016*
 
-[ [WTFP License](http://www.wtfpl.net) | [Improve this reference](http://github.com/joshrosso) | [View all references](../index.html) ]
+[ [WTFP License](http://www.wtfpl.net) | [Improve this reference](http://github.com/joshrosso/octetz.com) | [View all references](../index.html) ]

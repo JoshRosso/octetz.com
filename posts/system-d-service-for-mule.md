@@ -1,6 +1,6 @@
 # systemd Service for Mule
 
-[ [WTFP License](http://www.wtfpl.net) | [Improve this reference](http://github.com/joshrosso) | [View all references](../index.html) ]
+[ [WTFP License](http://www.wtfpl.net) | [Improve this reference](http://github.com/joshrosso/octetz.com) | [View all references](../index.html) ]
 
 ---
 
@@ -148,7 +148,7 @@ This creates a symlink in `/etc/systemd/system/multi-user.wants` ensuring when t
 
 systemd provides tons of configuration options from here. We can automate when Mule starts. For example, when a socket connection is opened or on a timer. We can also limit the resource footprint available to ththeule process. In this final section, we'll modify a few simple parameters and see the service impact based on some systemd tooling.
 
-To alter the existing unit, use `systemctl edit`. The `--full` flag edits the unit directly, rather than the default which is to create an [override file](https://www.freedesktop.org/software/systemd/man/systemd.unit.html#id-1.11.3). Note the edtior used to alter the file is defined by what resolves as `$SYSTEMD_EDITOR` or `$EDITOR`. Alternativly, you can alter the `.service` file directly. However, that method requires reloading the systemctl daemon for changes to be seen.
+To alter the existing unit, use `systemctl edit`. The `--full` flag edits the unit directly, rather than the default which is to create an [override file](https://www.freedesktop.org/software/systemd/man/systemd.unit.html#id-1.11.3). Note the edtior used to alter the file is defined by what resolves as `$SYSTEMD_EDITOR` or `$EDITOR`. Alternatively, you can alter the `.service` file directly. However, that method requires reloading the systemctl daemon for changes to be seen.
 
 ```
 systemctl edit mule.service --full
@@ -235,6 +235,6 @@ There are many more [resource-related options](https://www.freedesktop.org/softw
 
 ---
 
-*Last updated: 10/12/2016*
+*Last updated: 10/13/2016*
 
-[ [WTFP License](http://www.wtfpl.net) | [Improve this reference](http://github.com/joshrosso) | [View all references](../index.html) ]
+[ [WTFP License](http://www.wtfpl.net) | [Improve this reference](http://github.com/joshrosso/octetz.com) | [View all references](../index.html) ]

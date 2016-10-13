@@ -1,7 +1,7 @@
 Missed Connections: Implications of Pooling
 ===========================================
 
-[ [WTFP License](http://www.wtfpl.net) | [Improve this reference](http://github.com/joshrosso) | [View all references](../index.html) ]
+[ [WTFP License](http://www.wtfpl.net) | [Improve this reference](http://github.com/joshrosso/octetz.com) | [View all references](../index.html) ]
 
 ---
 
@@ -728,4 +728,4 @@ easily become the bottleneck in your overall application.
 
 *Last updated: 10/12/2016*
 
-[ [WTFP License](http://www.wtfpl.net) | [Improve this reference](http://github.com/joshrosso) | [View all references](../index.html) ]
+[ [WTFP License](http://www.wtfpl.net) | [Improve this reference](http://github.com/joshrosso/octetz.com) | [View all references](../index.html) ]
