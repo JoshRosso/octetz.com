@@ -1,0 +1,16 @@
+[Unit]
+Description=Mule Runtime 3.8.1
+Documentation=https://docs.mulesoft.com
+
+[Service]
+Type=forking
+User=mule
+ExecStart=/opt/mule-standalone-3.8.1/bin/mule start
+ExecStop=/opt/mule-standalone-3.8.1/bin/mule stop
+ExecReload=/opt/mule-standalone-3.8.1/bin/mule restart
+CPUQuota=50%
+MemoryMax=1024M
+TimeoutSec=45
+
+[Install]
+WantedBy=multi-user.target
