@@ -1,14 +1,15 @@
 [Unit]
-Description=Mule Runtime 3.8.1
+Description=Mule Runtime 3.8.2
 Documentation=https://docs.mulesoft.com
 
 [Service]
 Type=forking
 User=mule
-ExecStart=/opt/mule-standalone-3.8.1/bin/mule start
-ExecStop=/opt/mule-standalone-3.8.1/bin/mule stop
-ExecReload=/opt/mule-standalone-3.8.1/bin/mule restart
+ExecStart=/opt/mule-standalone-3.8.2/bin/mule start
+ExecStop=/opt/mule-standalone-3.8.2/bin/mule stop
+ExecReload=/opt/mule-standalone-3.8.2/bin/mule restart
 CPUQuota=50%
+#MemoryHigh=1024M
 MemoryMax=1024M
 TimeoutSec=45
 
