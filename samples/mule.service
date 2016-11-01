@@ -10,7 +10,7 @@ ExecStop=/opt/mule-standalone-3.8.2/bin/mule stop
 ExecReload=/opt/mule-standalone-3.8.2/bin/mule restart
 CPUQuota=50%
 #MemoryHigh=1024M
-MemoryMax=1024M
+MemoryMax=1536M
 TimeoutSec=45
 
 [Install]
