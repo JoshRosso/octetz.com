@@ -61,7 +61,7 @@ community/sipcalc 1.1.6-2
     an advanced console based ip subnet calculator.
 ```
 
-<img src="imgs/arch-pkg-search-sipcalc.png" width="600">
+<img src="../imgs/arch-pkg-search-sipcalc.png" width="600">
 
 > Equivalent search via the Arch package search.
 
