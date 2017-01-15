@@ -1,0 +1,60 @@
+Arch Linux Package Management
+What you need to know
+15:04 14 Jan 2017
+
+Josh Rosso
+https://octetz.com
+@joshrosso
+
+* Motivation
+
+- Helping roommate setup 1st Arch system
+- Reminded of how challenging it can be to learn various concepts
+- AUR
+- pacman
+- yaourt
+- Lots of good info out there, but nothing that cleanly spans key points without getting too into the weeds
+
+* pacman
+
+- pacman is Arch's package manager
+- Handles the downloading, installation, updating, and removing of packages
+- Generally best practice to manage software this way
+
+	$ pacman --help
+	usage:  pacman <operation> [...]
+	operations:
+
+	pacman {-h --help}
+	pacman {-V --version}
+	pacman {-D --database} <options> <package(s)>
+	pacman {-F --files}    [options] [package(s)]
+	pacman {-Q --query}    [options] [package(s)]
+	pacman {-R --remove}   [options] <package(s)>
+	pacman {-S --sync}     [options] [package(s)]
+	pacman {-T --deptest}  [options] [package(s)]
+	pacman {-U --upgrade}  [options] <file(s)>
+	
+
+* Official repositories
+
+- Repositories hold packages downloaded by pacman
+- Arch maintains a few official repositories
+- These repositories are accessible to pacman
+- Packages you need may not exist in an official repo
+
+* User repositories
+
+- Arch User Repository (AUR)
+- Many extra packages
+- Maintained by the community
+- Not directly accessible by pacman
+- Multiple install methods
+
+* AUR helper: yaourt
+
+- Extends pacman functionality
+- Built in AUR support
+- More interactive
+- Convenience of mixing AUR and official repos
+- Installed like any other package
