@@ -4,6 +4,12 @@
 
 ---
 
+## Video
+
+The video below is a live demonstration of the topics covered in this post.
+
+<iframe width="800" height="400" src="https://www.youtube.com/embed/SckNg11n3MY" frameborder="0" allowfullscreen></iframe>
+
 ## Motivation
 
 Last week I helped my roommate setup Arch Linux as his first Linux desktop. Explaining the various facets of package management brought me back to when I'd first learned Arch and was discovering the use of pacman, AUR, yaourt, and more. While there's no shortage of great documentation around all these topics, I felt a clean overview of key concepts critical to a new user would have made both of our lives easier.
