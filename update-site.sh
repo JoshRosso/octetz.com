@@ -18,7 +18,7 @@ cp -rv index.html $SERVER_LOCATION
 echo
 echo "$LOG_PREFIX Updating octetz.com"
 echo
-cp -rv ./octetz ${SERVER_LOCATION}/octetz
+cp -rv ./octetz ${SERVER_LOCATION}/octetz-hugo
 
 # update vanhabits.com
 echo
